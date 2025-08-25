@@ -12,19 +12,28 @@ model = GigaChat(
     credentials="MjY5NzhmNDItYjU4Ny00Y2ZlLTgzOTUtMjIyYzA3NzQzZGYwOjZkOTYyOThkLTE5YzEtNGVhNC05ZmEyLTA1ZTkxZGE5OTE1Mg=="
 )
 
-print("Распознаю текст...")
-# Загружаем изображение
-with open(image_path, "rb") as image_file:
+#message = model.invoke("Привет, как дела?")
+
+#message = {"role": "user", "content": "Привет, как дела?"}
+#response = model.invoke([message])
+#print(response.content)
+
+#message = {"role": "assistant", "content": response.content}
+
+#message = {"role": "user", "content": "Прогноз погоды в Москве на 10 дней."}
+#response = model.invoke([message])
+#print(response.content)
+
+with open("Image20250825114326.png", "rb") as image_file:
     file_uploaded_id = model.upload_file(image_file).id_
-# Отправляем запрос на распознавание текста
+
 message = {
     "role": "user",
     "content": "Распознай текст с этого изображения и выведи его полностью.",
     "attachments": [file_uploaded_id]
 }
+
 response = model.invoke([message])
-# Выводим результат
-print("\nРаспознанный текст:")
-print("-" * 50)
 print(response.content)
-print("-" * 50)
+# Работает!
+
