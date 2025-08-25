@@ -14,6 +14,13 @@ model = GigaChat(
 
 #message = model.invoke("Привет, как дела?")
 
-message = {"role": "user", "content": "Привет, как дела?"}
+#message = {"role": "user", "content": "Привет, как дела?"}
+#response = model.invoke([message])
+#print(response.content)
+
+#message = {"role": "assistant", "content": response.content}
+
+message = {"role": "user", "content": "Прогноз погоды в Москве на 10 дней."}
 response = model.invoke([message])
 print(response.content)
+
