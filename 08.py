@@ -6,7 +6,7 @@ from langchain_gigachat.chat_models import GigaChat
 model = GigaChat(
     model="GigaChat-2-Max",
     verify_ssl_certs=False,
-    credentials="MjY5NzhmNDItYjU4Ny00Y2ZlLTgzOTUtMjIyYzA3NzQzZGYwOjZkOTYyOThkLTE5YzEtNGVhNC05ZmEyLTA1ZTkxZGE5OTE1Mg=="
+    credentials="=="
 )
 
 ###сделай минимальный интерфейс на tkinter (без классов) для ввода файла и выводы инфы о компании.
