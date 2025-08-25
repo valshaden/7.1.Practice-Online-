@@ -9,7 +9,7 @@ pip install langchain-gigachat>=0.3.10
 model = GigaChat(
     model="GigaChat-2-Max",
     verify_ssl_certs=False,
-    credentials="MjY5NzhmNDItYjU4Ny00Y2ZlLTgzOTUtMjIyYzA3NzQzZGYwOjZkOTYyOThkLTE5YzEtNGVhNC05ZmEyLTA1ZTkxZGE5OTE1Mg=="
+    credentials="=="
 )
 
 print("Распознаю текст...")
